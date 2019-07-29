@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.algaworks.brewer.model.Cerveja;
+import com.algaworks.brewer.model.Origem;
 import com.algaworks.brewer.model.Sabor;
 import com.algaworks.brewer.repository.Cervejas;
 import com.algaworks.brewer.repository.Estilos;
@@ -31,6 +32,7 @@ public class CervejasController {
 		ModelAndView mv = new ModelAndView("cerveja/CadastroCerveja");
 		mv.addObject("sabores", Sabor.values());
 		mv.addObject("estilos", estilos.findAll());
+		mv.addObject("origens", Origem.values());
 		return mv;
 	}
 	
