@@ -39,9 +39,9 @@ public class CervejasController {
 	@RequestMapping(value = "/cervejas/novo", method = RequestMethod.POST)
 	public ModelAndView cadastrar(@Valid Cerveja cerveja, BindingResult result, Model model, RedirectAttributes attrs) {
 		
-		if(result.hasErrors()) {
-			return novo(cerveja);
-		}
+//		if(result.hasErrors()) {
+//			return novo(cerveja);
+//		}
 		
 		attrs.addFlashAttribute("mensagem", "Cerveja salva com sucesso!");
 		return new ModelAndView("redirect:/cervejas/novo");
